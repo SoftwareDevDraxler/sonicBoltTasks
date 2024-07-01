@@ -3,25 +3,20 @@
 // December, January or February, the season is Winter.
 // March, April or May, the season is Spring
 // June, July or August, the season is Summer
-function seasonChecker(month){
-    sanitisedMonth = month.toLowerCase();
-    if(sanitisedMonth==='september' || sanitisedMonth==='october' || sanitisedMonth==='november'){
+const prompt = require('prompt-sync')(); 
+function seasonChecker(){
+    const month = prompt('Enter the month : ').toLowerCase();
+    if(month==='september' || month==='october' || month==='november'){
         return 'Autumn';
-    } else if(sanitisedMonth==='december' || sanitisedMonth==='january' || sanitisedMonth==='february'){
+    } else if(month==='december' || month==='january' || month==='february'){
         return 'Winter';
-    } else if(sanitisedMonth==='march' || sanitisedMonth==='april' || sanitisedMonth==='may'){
+    } else if(month==='march' || month==='april' || month==='may'){
         return 'Spring';
-    } else if(sanitisedMonth==='june' || sanitisedMonth==='july' || sanitisedMonth==='august'){
+    } else if(month==='june' || month==='july' || month==='august'){
         return 'Summer';
     } else {
         return 'Invalid Month';
     }
 }
 
-console.log(seasonChecker('September'));
-console.log(seasonChecker('January'));
-console.log(seasonChecker('December'));
-console.log(seasonChecker('May'));
-console.log(seasonChecker('June'));
-console.log(seasonChecker('July'));
-console.log(seasonChecker('February'));
+console.log(seasonChecker());
