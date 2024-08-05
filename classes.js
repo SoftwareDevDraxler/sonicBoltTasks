@@ -183,22 +183,6 @@ class Statistics {
             .sort((a, b) => b[0] - a[0]);
         return freqArray.map(([percent, value]) => `(${percent}, ${value})`);
     }
-
-    describe() {
-        return `
-Count: ${this.count()}
-Sum: ${this.sum()}
-Min: ${this.min()}
-Max: ${this.max()}
-Range: ${this.range()}
-Mean: ${this.mean()}
-Median: ${this.median()}
-Mode: (${this.mode().mode}, ${this.mode().count})
-Variance: ${this.var()}
-Standard Deviation: ${this.std().toFixed(1)}
-Frequency Distribution: [${this.freqDist().join(', ')}]
-        `;
-    }
 }
 const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26];
 const statistics = new Statistics(ages);
